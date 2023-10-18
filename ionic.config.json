@@ -1,0 +1,7 @@
+{
+  "name": "BateauDeThibault",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
