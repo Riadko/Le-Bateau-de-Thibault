@@ -1,0 +1,35 @@
+ion-content {
+    --background: #fff url('../../assets/images/background.png') no-repeat center center / cover;
+  
+  }
+  ion-content::after {
+    content: "";
+    position: absolute;
+    top: 5.5%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 17%); /* This adds a green color filter with 50% opacity */
+  }
+  .list-product
+  {
+    background-color: #6060605c;
+    margin-bottom: -3%;
+    height: 5%;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+    color: #fff;
+  }
+  .left-align {
+    text-align: left;
+  }
+  
+  .right-align {
+    text-align: right;
+    flex: 1;
+  }
+  
+  ion-toolbar {
+    --background: #000; /* Set the background color to black */
+  }

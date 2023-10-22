@@ -1,0 +1,43 @@
+ion-content {
+    --background: #fff url('../../assets/images/background.png') no-repeat center center / cover;
+    --ion-font-family: 'Chinese Stxingka', cursive !important;
+}
+
+ion-toolbar {
+    --background: #000; /* Set the background color to black */
+}
+
+.transparent-button {
+    --background: transparent; /* Set the background of the button to transparent */
+    color: #ffffff; /* Set the text color to white (or your preferred color) */
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+  
+
+  
+img.centered-image {
+    width: 32px; /* Adjust the width and height as needed */
+    height: 32px;
+}
+
+
+h1 {
+    text-align: center;
+    margin-top: 0;
+  }
+
+  #colored-paragraph {
+    padding: 10px; /* Optional: Add padding to the paragraph */
+    color: black; /* Optional: Set the text color */
+    text-align: center; 
+    margin-top: 0;
+  }
+
+  .total-price-label {
+    position: absolute;
+    right: 10px; /* You can adjust the right offset as needed */
+  }
+  .prices{
+    color: black;
+  }

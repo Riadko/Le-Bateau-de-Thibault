@@ -1,0 +1,43 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-button slot="start" class="transparent-button" (click)="onGoToHome()">
+      <img [src]="logoHome" width="32" height="32">
+    </ion-button>
+
+    <ion-title class="ion-text-center">
+      <img src="../../assets/images/navbarbg.png">
+    </ion-title>
+
+    <ion-button slot="end" class="transparent-button" (click)="onGoToPanier()">
+      <img [src]="logoPanier" width="32" height="32">
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p id="colored-paragraph">Modifier la quantité en tappant sur chaque produit</p>
+  <ion-button  expand="full" class="container" id="present-alert">
+    <ion-alert
+        trigger="present-alert"
+        header="Evoyer votre commande de {{ calculateTotalSum() }} € à Thibault"
+        [buttons]="alertButtons"
+        (didDismiss)="setResult($event)"
+      ></ion-alert>
+    <ion-label class="total-price-label">Total: {{ calculateTotalSum() }} €</ion-label>
+      
+  </ion-button>
+
+  <div *ngFor="let product of productsList">
+    <h1>
+      {{ product.name }}
+    </h1>
+
+    <ion-button *ngFor="let desc of product.description; let i = index" expand="full" class="container" (click)="openQuantityDialog(desc)">
+      <ion-label>{{ desc }}&nbsp;&nbsp; - &nbsp;&nbsp;</ion-label>
+      <span class="prices">
+        {{ selectedQuantities[desc] || 0 }} X {{ product.price && product.price[i] || '0' }} : {{ calculateTotalPrice(desc, selectedQuantities[desc], product.price![i]) }} €
+      </span>
+    </ion-button>
+    
+  </div>
+</ion-content>

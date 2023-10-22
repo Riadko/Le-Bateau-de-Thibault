@@ -1,0 +1,32 @@
+ion-content {
+    --background: #fff url('../../assets/images/background.png') no-repeat center center / cover;
+    --ion-font-family: 'Chinese Stxingka', cursive !important;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#container p {
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+#container strong {
+  font-size: 30px;
+  line-height: 90px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.transparent-button {
+  --background: transparent; /* Set the background of the button to transparent */
+  color: #ffffff; /* Set the text color to white (or your preferred color) */
+  margin-top: 0px;
+  margin-bottom: 0px;
+}

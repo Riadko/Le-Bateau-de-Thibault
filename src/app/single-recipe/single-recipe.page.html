@@ -1,0 +1,7 @@
+<ion-content [fullscreen]="true">
+  <div>
+    <h1 class="ion-text-center ion-padding" style="margin-bottom: 25%;"><em>{{recipe.title}}</em></h1>
+    <img src="../../assets/images/{{recipe.image}}" style="margin-bottom: 25%;" width="100" height="100" />
+    <p class="ion-text-center" *ngFor="let d of recipe.description">{{d}}</p>
+  </div>
+</ion-content>

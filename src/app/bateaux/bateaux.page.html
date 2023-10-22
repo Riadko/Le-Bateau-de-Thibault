@@ -1,0 +1,34 @@
+<ion-content [fullscreen]="true">
+  <div>
+    <h1 class="ion-text-center ion-padding"><em>Le bateau de Thibault</em></h1>
+    <p class="text">
+      Tous les eaux menet à Thibault<br>
+      06.63.99.99.78<br>
+      lebateaudethibault@gmail.com<br>
+      www.facebook.com/lebatheaudethibault
+    </p>
+
+    <ion-grid class="grid-bottom">
+        <div class="wrapper">
+          <div class="ion-activatable ripple-parent rectangle" ion-item *ngFor="let bateau of bateauxList" (click)="onGoToBateau(bateau)">
+            <ion-ripple-effect></ion-ripple-effect>
+            <img src={{bateau.icon}} />
+            <p>{{bateau.name}}</p>
+          </div>
+
+          <div class="ion-activatable ripple-parent rectangle" (click)="onGoToContact()">
+            <ion-ripple-effect></ion-ripple-effect>
+            <img src="../../assets/images/ancre.png" />
+            <p>Contact</p>
+          </div>
+
+          <div class="ion-activatable ripple-parent rectangle" (click)="presentToast()">
+            <ion-ripple-effect></ion-ripple-effect>
+            <img src="../../assets/images/ancre.png" />
+            <p>Contact</p>
+          </div>
+        </div>
+    </ion-grid>
+    
+  </div>
+</ion-content>

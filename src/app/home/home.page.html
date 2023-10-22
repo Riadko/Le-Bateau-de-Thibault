@@ -1,20 +1,46 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div>
+    <h1 class="ion-text-center ion-padding"><em>Le bateau de Thibault</em></h1>
+    <p class="ion-text-center ion-padding">
+      Vente en direct de notre bateau<br>
+      Produits selon la saison, livraisons sur Paris<br>
+      06.63.99.99.78<br>
+      lebateaudethibault@gmail.com<br>
+      www.facebook.com/lebatheaudethibault
+    </p>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-grid class="grid-bottom">
+      <div class="ion-activatable ripple-parent rectangle" style="width: auto" (click)="onGoToProducts()">
+        <ion-ripple-effect></ion-ripple-effect>
+        <img src="../../assets/images/poisson.png" />
+        <p>Produits</p>
+      </div>
+        <div class="wrapper">
+          <div class="ion-activatable ripple-parent rectangle" (click)="onGoToBateaux()">
+            <ion-ripple-effect></ion-ripple-effect>
+            <img src="../../assets/images/ancre.png" />
+            <p>Bateaux</p>
+          </div>
+
+          <div class="ion-activatable ripple-parent rectangle" (click)="onGoToRestaurants()">
+            <ion-ripple-effect></ion-ripple-effect>
+            <img src="../../assets/images/restaurant.png" />
+            <p>Restaurants</p>
+          </div>
+
+          <div class="ion-activatable ripple-parent rectangle" (click)="onGoToRecipes()">
+            <ion-ripple-effect></ion-ripple-effect>
+            <img src="../../assets/images/recette.png" />
+            <p>Recettes</p>
+          </div>
+
+          <div class="ion-activatable ripple-parent rectangle" (click)="onGoToContact()">
+            <ion-ripple-effect></ion-ripple-effect>
+            <img src="../../assets/images/tourteau.png" />
+            <p>Contacts</p>
+          </div>
+        </div>
+    </ion-grid>
+
   </div>
 </ion-content>

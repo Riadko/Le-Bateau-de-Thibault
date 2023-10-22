@@ -1,0 +1,30 @@
+<ion-content [fullscreen]="true">
+  <div>
+    <h1 class="ion-text-center ion-padding"><em>Restaurants partenaires</em></h1>
+    <p class="ion-text-center ion-padding">
+      Tous les restaurants partenaires avec le bateau de Thibault<br>
+      06.63.99.99.78<br>
+      lebateaudethibault@gmail.com<br>
+      www.facebook.com/lebatheaudethibault
+    </p>
+
+    <ion-grid class="grid-bottom">
+        <div class="wrapper">
+          <div *ngFor="let resto of restaurantList" 
+          class="ion-activatable ripple-parent rectangle"
+          (click)="onLoadRestaurant(resto)">
+            <ion-ripple-effect></ion-ripple-effect>
+            <img src="{{resto.image}}" />
+            <p>{{resto.name}}</p>
+          </div>
+
+          <div class="ion-activatable ripple-parent rectangle" (click)="onGoToContact()">
+            <ion-ripple-effect></ion-ripple-effect>
+            <img src="../../assets/images/ancre.png" />
+            <p>Devenez partenaires</p>
+          </div>
+        </div>
+    </ion-grid>
+    
+  </div>
+</ion-content>

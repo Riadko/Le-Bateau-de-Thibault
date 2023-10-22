@@ -1,0 +1,23 @@
+<ion-content [fullscreen]="true">
+  <div>
+    <h1 class="ion-text-center ion-padding" style="margin-bottom: 30%;"><em>Vos recettes</em></h1>
+    <p class="ion-text-center ion-padding" style="margin-bottom: 30%;">
+      Vente en direct de notre bateau<br>
+      Produits selon la saison, livraisons sur Paris<br>
+      06.63.99.99.78<br>
+      lebateaudethibault@gmail.com<br>
+      www.facebook.com/lebatheaudethibault
+    </p>
+
+    <ion-grid class="grid-bottom">
+          <div style="width: 100%;">
+            <div class="wrapper">
+              <ion-button *ngFor="let recipe of recipesList" (click)="onLoadRecipe(recipe)" expand="full" class="btn-product">
+                <img src="../../assets/images/{{recipe.icon}}" width="50px" height="50px" />
+                <p style="width: 100%;">{{recipe.name}}</p>
+              </ion-button>
+            </div>
+          </div>
+    </ion-grid>
+  </div>
+</ion-content>

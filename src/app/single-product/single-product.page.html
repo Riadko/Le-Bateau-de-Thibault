@@ -1,0 +1,25 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-button slot="start" class="transparent-button" (click)="onGoToHome()">
+      <img [src]="logoHome" width="32" height="32">
+    </ion-button>
+
+    <ion-title class="ion-text-center">
+      <img src="../../assets/images/navbarbg.png">
+    </ion-title>
+
+    <ion-button slot="end" class="transparent-button" (click)="onGoToPanier()">
+      <img [src]="logoPanier" width="32" height="32">
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <p style="text-align: center; ">Choisisez vos produits</p>
+
+    <p *ngFor="let line of product.description; let i = index" class="list-product">
+      <span class="left-align">{{line}}</span>
+        <span class="right-align">{{product.price[i]}}</span>
+    </p>
+
+</ion-content>

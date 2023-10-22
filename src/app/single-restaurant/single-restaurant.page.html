@@ -1,0 +1,7 @@
+<ion-content [fullscreen]="true">
+  <div>
+    <h1 class="ion-text-center ion-padding"><em>{{restaurant.name}}</em></h1>
+    <img src="{{newImage}}"/>
+    <p class="ion-text-center" *ngFor="let d of restaurant.description">{{d}}</p>
+  </div>
+</ion-content>
